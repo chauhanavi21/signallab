@@ -26,6 +26,11 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self): self.handle_request("POST")
     def handle_request(self, method):
         try:
+            # Reject unexpected Host values so a DNS-rebinding page cannot
+            # read this loopback server through a name it controls.
+            host = self.headers.get("Host")
+            if host is not None and host.lower() not in {f"127.0.0.1:{self.server.server_port}", f"localhost:{self.server.server_port}"}:
+                raise Fault(403, "Unexpected Host header.")
             target = urlsplit(self.path)
             query = parse_qs(target.query, keep_blank_values=True)
             if any(len(v) != 1 for v in query.values()):
@@ -42,8 +47,10 @@ class Handler(BaseHTTPRequestHandler):
             if method == "POST":
                 try: size = int(self.headers.get("Content-Length", "0"))
                 except ValueError: raise Fault(400, "Invalid content length.") from None
-                if not 0 < size <= 1000000:
-                    raise Fault(413, "JSON request must be between 1 byte and 1 MB.")
+                if size <= 0:
+                    raise Fault(400, "Send a JSON object body; use {} when there are no fields.")
+                if size > 1000000:
+                    raise Fault(413, "JSON request must be at most 1 MB.")
                 # Drain bounded bodies before rejecting their metadata. Closing
                 # a Windows socket with unread input can discard the response.
                 raw = self.rfile.read(size)

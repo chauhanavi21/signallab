@@ -33,3 +33,14 @@ class HTTPTests(BoundaryCase):
     def test_static_traversal_and_duplicate_query_rejected(self):
         self.assertEqual(self.request("GET", "/../core.py")[0], 404)
         self.assertEqual(self.request("GET", "/api/health?x=1&x=2")[0], 400)
+
+    def test_unexpected_host_header_rejected(self):
+        self.assertEqual(self.request("GET", "/api/health", headers={"Host": "evil.example"})[0], 403)
+        self.assertEqual(self.request("GET", "/api/health", headers={"Host": "evil.example:%d" % self.server.server_port})[0], 403)
+        self.assertEqual(self.request("GET", "/api/health", headers={"Host": "localhost:%d" % self.server.server_port})[0], 200)
+        self.assertEqual(self.request("GET", "/api/health")[0], 200)
+
+    def test_empty_post_body_is_bad_request_not_too_large(self):
+        status, _, body = self.request("POST", "/api/health", raw="", headers={"Content-Type": "application/json"})
+        self.assertEqual(status, 400)
+        self.assertIn("{}", body["error"])
