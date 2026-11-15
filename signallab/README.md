@@ -51,7 +51,7 @@ The redesigned workspace includes light/dark themes, animated data views, scroll
 python verify.py
 ```
 
-This runs **19 core/HTTP tests** and regenerates [policy-study.json](artifacts/policy-study.json), [demo-report.json](artifacts/demo-report.json), [sample.csv](artifacts/sample.csv), and [verification.json](artifacts/verification.json). Tests include an independent brute-force rolling-window oracle, CSV and JSON validation, incomplete-history handling, labeling, and actual HTTP requests.
+This runs **21 core/HTTP tests** and regenerates [policy-study.json](artifacts/policy-study.json), [demo-report.json](artifacts/demo-report.json), [sample.csv](artifacts/sample.csv), and [verification.json](artifacts/verification.json). Tests include an independent brute-force rolling-window oracle, CSV and JSON validation, incomplete-history handling, labeling, and actual HTTP requests.
 
 Optional browser verification in a dedicated environment:
 

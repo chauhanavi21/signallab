@@ -14,6 +14,6 @@ This supports a narrow conclusion: the implementation makes the expected noise/d
 
 The default artifact's run ID is `66bf134bf8caf70fad058f6b6901cef9d66ef90bb524d5b0473fde6090d76ebe`. Changing a model version, trace, or configuration changes its identity. Browser defaults are checked against the CLI result.
 
-The local verification recorded 19 passing core/HTTP tests and 36 passing browser checks. Browser evidence includes 1440, 1024, and 390 px widths, imports/exports, and no uncaught JavaScript errors or HTTP 5xx responses. Timestamps and environment details are in the JSON artifacts. These are local results, not hosted CI or production claims.
+The local verification recorded 21 passing core/HTTP tests and 36 passing browser checks. Browser evidence includes 1440, 1024, and 390 px widths, imports/exports, and no uncaught JavaScript errors or HTTP 5xx responses. Timestamps and environment details are in the JSON artifacts. These are local results, not hosted CI or production claims.
 
 For an interview, demonstrate the two-minute request-weighting counterexample from the tests, explain why incomplete windows remain unknown, then show the delay cost alongside the reduced firing time. A defensible trade-off is stronger evidence than saying the most elaborate policy always wins.

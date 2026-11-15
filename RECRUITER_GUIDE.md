@@ -8,7 +8,7 @@ SignalLab evaluates when observed service errors should become an alert. The pro
 
 ## Draft résumé bullets
 
-- Built a Python and JavaScript SLO replay studio with request-weighted rolling windows, validated CSV import, SVG charts, and JSON export; verified 19 core/HTTP tests and 36 browser checks.
+- Built a Python and JavaScript SLO replay studio with request-weighted rolling windows, validated CSV import, SVG charts, and JSON export; verified 21 core/HTTP tests and 36 browser checks.
 - Compared three alert policies across three seeded synthetic traces, measuring false episodes, firing duration, and detection delay; documented the precision and latency trade-offs without extrapolating to production traffic.
 
 ## Evidence to show
