@@ -36,5 +36,5 @@ if __name__ == "__main__":
     with ThreadPoolExecutor(max_workers=2) as pool: records = list(pool.map(fetch, SOURCES))
     path = Path(__file__).resolve().parent / "artifacts/research-sources.json"
     path.parent.mkdir(exist_ok=True)
-    path.write_text(json.dumps(records, indent=2), encoding="utf-8")
+    path.write_text(json.dumps(records, indent=2), encoding="utf-8", newline="\n")
     print(json.dumps(records, indent=2))

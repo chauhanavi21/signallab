@@ -21,6 +21,6 @@ if __name__ == "__main__":
         check_real_data()
         record["real_data_passed"]=True
     (root / "artifacts").mkdir(exist_ok=True)
-    (root / "artifacts/verification.json").write_text(json.dumps(record,indent=2),encoding="utf-8")
+    (root / "artifacts/verification.json").write_text(json.dumps(record,indent=2),encoding="utf-8", newline="\n")
     print(json.dumps({key:value for key,value in record.items() if key!="evidence"},indent=2))
     raise SystemExit(0 if result.wasSuccessful() else 1)

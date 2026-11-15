@@ -27,7 +27,7 @@ def main():
               "minutes": len(rows), "requests": provenance["total_requests"], "http_5xx": 0,
               "alert_episodes": len(report["alerts"]), "run_id": report["run_id"],
               "scope": "Historical count-import and zero-5xx baseline validation only. No actionable incident labels exist. This sample cannot validate detection delay, false positives or production alert efficacy. 4xx responses are included in traffic and excluded from server-failure counts."}
-    (ROOT / "artifacts/real-data-checks.json").write_text(json.dumps(result, indent=2)+"\n", encoding="utf-8")
+    (ROOT / "artifacts/real-data-checks.json").write_text(json.dumps(result, indent=2)+"\n", encoding="utf-8", newline="\n")
     print(json.dumps(result))
 
 

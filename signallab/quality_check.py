@@ -116,7 +116,7 @@ def main():
         result = {"checked_at": datetime.now(timezone.utc).isoformat(), "project": ROOT.name,
                   "browser_version": browser.version, "accessibility": audit(browser, base), "mobile": mobile(browser, base)}
         browser.close()
-    (ROOT / "artifacts/quality-checks.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    (ROOT / "artifacts/quality-checks.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({"project": ROOT.name, "accessibility_violations": result["accessibility"]["violations"],
                       "mobile_passed": result["mobile"]["passed"], "initial_ready_ms": result["mobile"]["measurement"]["initial_ready_ms"]}))
     if result["accessibility"]["violations"] or not result["mobile"]["passed"]:

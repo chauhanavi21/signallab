@@ -25,7 +25,7 @@ def main():
     root = Path(__file__).resolve().parent
     if args.report:
         report = analyze()
-        (root / "artifacts/demo-report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+        (root / "artifacts/demo-report.json").write_text(json.dumps(report, indent=2), encoding="utf-8", newline="\n")
         print(json.dumps({"run_id": report["run_id"], "comparison": report["comparison"]}, indent=2))
     else: serve(Server(args.port, API, root))
 

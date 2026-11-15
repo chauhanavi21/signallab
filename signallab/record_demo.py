@@ -95,7 +95,7 @@ def main():
                 "bytes": destination.stat().st_size, "sha256":hashlib.sha256(destination.read_bytes()).hexdigest(),
                 "viewport": "1280x800", "format": "WebM", "audio": "Silent, with on-screen captions",
                 "chapters": chapters, "scope": "Uncut automated capture of the local Python app with an isolated temporary database."}
-    (ROOT / "artifacts/demo-recording.json").write_text(json.dumps(metadata,indent=2)+"\n")
+    (ROOT / "artifacts/demo-recording.json").write_text(json.dumps(metadata,indent=2)+"\n", encoding="utf-8", newline="\n")
     print(json.dumps({"project":ROOT.name,"video_bytes":metadata["bytes"]}))
 
 

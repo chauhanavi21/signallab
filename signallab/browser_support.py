@@ -124,5 +124,5 @@ def run(scenario):
               "browser":args.browser, "browser_version":browser_version, "checks":checks, "passed":len(checks), "page_errors":errors, "http_5xx":failures,
               "frame_cadence":frame_sample,
               "note":"Headless browser engine, isolated temporary server/database. WebKit on this host is not Safari. Includes domain workflows, keyboard navigation, theme/motion persistence, reduced motion, downloads, and three viewport widths."}
-    (root / ("artifacts/browser-checks.json" if args.browser == "chromium" else f"artifacts/browser-checks-{args.browser}.json")).write_text(json.dumps(result, indent=2), encoding="utf-8")
+    (root / ("artifacts/browser-checks.json" if args.browser == "chromium" else f"artifacts/browser-checks-{args.browser}.json")).write_text(json.dumps(result, indent=2), encoding="utf-8", newline="\n")
     print(json.dumps({"project":root.name, "browser":args.browser, "passed":len(checks), "page_errors":errors, "http_5xx":failures}))

@@ -104,7 +104,7 @@ def main():
               "checks": checks, "passed": len(checks), "page_errors": errors,
               "scope": "Actual in-browser Python execution. No server-side HTTP/session/concurrency guarantee is inferred."}
     name = "pages-live" if args.url else "pages"
-    (ROOT / PROJECT / f"artifacts/{name}-{args.browser}.json").write_text(json.dumps(result, indent=2)+"\n")
+    (ROOT / PROJECT / f"artifacts/{name}-{args.browser}.json").write_text(json.dumps(result, indent=2)+"\n", encoding="utf-8", newline="\n")
     print(json.dumps({"project": PROJECT, "browser": args.browser, "target": name, "passed":len(checks)}))
 
 

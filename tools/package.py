@@ -96,5 +96,5 @@ if __name__ == "__main__":
     if not args.check: build(files)
     record = verify(files)
     if not args.check:
-        (ARCHIVE.parent / "source-package.json").write_text(json.dumps(record,indent=2)+"\n",encoding="utf-8")
+        (ARCHIVE.parent / "source-package.json").write_text(json.dumps(record,indent=2)+"\n",encoding="utf-8", newline="\n")
     print(json.dumps(record,indent=2))
