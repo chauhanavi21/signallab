@@ -1,0 +1,45 @@
+/* The notice occupies its own measured row; preserve the app header height. */
+#browser-demo {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin: 0;
+  padding: 9px 20px;
+  background: var(--accent-solid);
+  color: var(--accent-ink);
+  font:
+    600 12px/1.5 system-ui,
+    sans-serif;
+  text-align: center;
+}
+html[data-demo="browser"] {
+  scroll-padding-top: calc(
+    var(--header) + var(--demo-banner-height, 54px) + 64px
+  );
+}
+html[data-demo="browser"] .topbar {
+  top: var(--demo-banner-height, 54px);
+}
+html[data-demo="browser"] aside {
+  top: calc(var(--header) + var(--demo-banner-height, 54px) + 24px);
+}
+html[data-demo="browser"] .mobile-nav {
+  top: calc(var(--header) + var(--demo-banner-height, 54px));
+}
+#browser-demo[data-failed="true"] {
+  background: #ffe2e2;
+  color: #721f1f;
+}
+@media (max-width: 650px) {
+  html[data-demo="browser"] .login-layout {
+    padding-top: 22px;
+    gap: 18px;
+  }
+  html[data-demo="browser"] .login-story .subtitle {
+    display: none;
+  }
+  #browser-demo {
+    padding: 7px 14px;
+    font-size: 11px;
+  }
+}

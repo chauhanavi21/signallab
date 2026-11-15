@@ -1,0 +1,162 @@
+{
+  "checked_at": "2026-11-15T05:52:15.311168+00:00",
+  "project": "signallab",
+  "browser": "chromium",
+  "browser_version": "159.0.8154.6",
+  "checks": [
+    {
+      "name": "initial replay renders computed policies",
+      "passed": true
+    },
+    {
+      "name": "burn chart rendered",
+      "passed": true
+    },
+    {
+      "name": "default incident episodes",
+      "passed": true
+    },
+    {
+      "name": "service selection updates chart",
+      "passed": true
+    },
+    {
+      "name": "configuration reaches calculation engine",
+      "passed": true
+    },
+    {
+      "name": "export includes reproducible run hash",
+      "passed": true
+    },
+    {
+      "name": "invalid CSV has actionable error",
+      "passed": true
+    },
+    {
+      "name": "imported data has no fabricated incident scores",
+      "passed": true
+    },
+    {
+      "name": "sample download has exact CSV header",
+      "passed": true
+    },
+    {
+      "name": "demo can be restored after import",
+      "passed": true
+    },
+    {
+      "name": "browser and CLI default run hashes match",
+      "passed": true
+    },
+    {
+      "name": "chart keyboard inspection reaches the real final minute",
+      "passed": true
+    },
+    {
+      "name": "chart keyboard inspection steps through request buckets",
+      "passed": true
+    },
+    {
+      "name": "hero service summaries come from the replay",
+      "passed": true
+    },
+    {
+      "name": "workspace motion layer loads",
+      "passed": true
+    },
+    {
+      "name": "keyboard navigation filters sections",
+      "passed": true
+    },
+    {
+      "name": "scroll navigation tracks the visible section",
+      "passed": true
+    },
+    {
+      "name": "scroll progress follows page position",
+      "passed": true
+    },
+    {
+      "name": "back-to-top returns to the workspace heading",
+      "passed": true
+    },
+    {
+      "name": "Escape dismisses keyboard navigation",
+      "passed": true
+    },
+    {
+      "name": "color theme changes",
+      "passed": true
+    },
+    {
+      "name": "theme preference survives reload",
+      "passed": true
+    },
+    {
+      "name": "motion can be paused",
+      "passed": true
+    },
+    {
+      "name": "motion preference survives reload",
+      "passed": true
+    },
+    {
+      "name": "system reduced motion suppresses animations",
+      "passed": true
+    },
+    {
+      "name": "normal motion returns when system preference clears",
+      "passed": true
+    },
+    {
+      "name": "desktop: no page overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop: metric values fit their cards",
+      "passed": true
+    },
+    {
+      "name": "tablet: no page overflow",
+      "passed": true
+    },
+    {
+      "name": "tablet: metric values fit their cards",
+      "passed": true
+    },
+    {
+      "name": "tablet: section navigation stays available",
+      "passed": true
+    },
+    {
+      "name": "mobile: no page overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile: metric values fit their cards",
+      "passed": true
+    },
+    {
+      "name": "mobile: section navigation stays available",
+      "passed": true
+    },
+    {
+      "name": "no uncaught JavaScript errors",
+      "passed": true
+    },
+    {
+      "name": "no HTTP 5xx responses",
+      "passed": true
+    }
+  ],
+  "passed": 36,
+  "page_errors": [],
+  "http_5xx": [],
+  "frame_cadence": {
+    "samples": 35,
+    "median_ms": 16.700000000000045,
+    "p95_ms": 16.800000000000182,
+    "note": "Local headless requestAnimationFrame cadence; not a production rendering benchmark."
+  },
+  "note": "Headless browser engine, isolated temporary server/database. WebKit on this host is not Safari. Includes domain workflows, keyboard navigation, theme/motion persistence, reduced motion, downloads, and three viewport widths."
+}

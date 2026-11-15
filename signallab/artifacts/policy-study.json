@@ -1,0 +1,142 @@
+{
+  "question": "How do noise, firing time, and detection delay change across policies?",
+  "seeds": [
+    7,
+    42,
+    2026
+  ],
+  "slo": 0.999,
+  "min_requests": 100,
+  "runs": [
+    {
+      "seed": 7,
+      "run_id": "5bee90bc36821777ecddf150c285c4b57c6b62cacd36a04d9f588422a2b2ef25",
+      "summary": {
+        "total": 3479974,
+        "bad": 9393,
+        "availability": 0.9973008419028419,
+        "replay_budget_use": 2.699158097158195,
+        "service_count": 3
+      },
+      "comparison": [
+        {
+          "key": "threshold",
+          "name": "One-minute SLO threshold",
+          "episodes": 80,
+          "firing_minutes": 298,
+          "precision": 0.025,
+          "recall": 1.0,
+          "median_detection_minutes": 0.0,
+          "false_episodes": 78
+        },
+        {
+          "key": "short_burn",
+          "name": "Five-minute burn only",
+          "episodes": 3,
+          "firing_minutes": 212,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "median_detection_minutes": 2.0,
+          "false_episodes": 1
+        },
+        {
+          "key": "multiwindow",
+          "name": "Multiwindow burn-rate",
+          "episodes": 2,
+          "firing_minutes": 159,
+          "precision": 1.0,
+          "recall": 1.0,
+          "median_detection_minutes": 36.5,
+          "false_episodes": 0
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "run_id": "66bf134bf8caf70fad058f6b6901cef9d66ef90bb524d5b0473fde6090d76ebe",
+      "summary": {
+        "total": 3477376,
+        "bad": 9339,
+        "availability": 0.9973143542717268,
+        "replay_budget_use": 2.6856457282732706,
+        "service_count": 3
+      },
+      "comparison": [
+        {
+          "key": "threshold",
+          "name": "One-minute SLO threshold",
+          "episodes": 88,
+          "firing_minutes": 303,
+          "precision": 0.022727272727272728,
+          "recall": 1.0,
+          "median_detection_minutes": 0.0,
+          "false_episodes": 86
+        },
+        {
+          "key": "short_burn",
+          "name": "Five-minute burn only",
+          "episodes": 2,
+          "firing_minutes": 207,
+          "precision": 1.0,
+          "recall": 1.0,
+          "median_detection_minutes": 3.0,
+          "false_episodes": 0
+        },
+        {
+          "key": "multiwindow",
+          "name": "Multiwindow burn-rate",
+          "episodes": 2,
+          "firing_minutes": 158,
+          "precision": 1.0,
+          "recall": 1.0,
+          "median_detection_minutes": 37.0,
+          "false_episodes": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026,
+      "run_id": "6949b8a1b7fb9a828911d733bba747e611387030ff69141cf2cd071a80dc6089",
+      "summary": {
+        "total": 3475713,
+        "bad": 9399,
+        "availability": 0.9972958066445647,
+        "replay_budget_use": 2.704193355435271,
+        "service_count": 3
+      },
+      "comparison": [
+        {
+          "key": "threshold",
+          "name": "One-minute SLO threshold",
+          "episodes": 88,
+          "firing_minutes": 309,
+          "precision": 0.022727272727272728,
+          "recall": 1.0,
+          "median_detection_minutes": 0.0,
+          "false_episodes": 86
+        },
+        {
+          "key": "short_burn",
+          "name": "Five-minute burn only",
+          "episodes": 4,
+          "firing_minutes": 210,
+          "precision": 0.75,
+          "recall": 1.0,
+          "median_detection_minutes": 2.5,
+          "false_episodes": 1
+        },
+        {
+          "key": "multiwindow",
+          "name": "Multiwindow burn-rate",
+          "episodes": 2,
+          "firing_minutes": 159,
+          "precision": 1.0,
+          "recall": 1.0,
+          "median_detection_minutes": 37.0,
+          "false_episodes": 0
+        }
+      ]
+    }
+  ],
+  "limits": "Three seeded synthetic repetitions with the same two incident shapes, not independent real incidents or a general performance estimate."
+}

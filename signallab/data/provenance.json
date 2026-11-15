@@ -1,0 +1,14 @@
+{
+  "dataset": "NASA-HTTP July 1995",
+  "source_url": "https://ita.ee.lbl.gov/html/contrib/NASA-HTTP.html",
+  "download_url": "https://ita.ee.lbl.gov/traces/NASA_access_log_Jul95.gz",
+  "license": "Source describes the logs as freely available; no explicit SPDX license supplied. Only minute-level count aggregates are redistributed.",
+  "retrieved_at": "2026-11-15T05:45:51.290882+00:00",
+  "download_sha256": "199109ed0f273e095da6ccd5fc9dc4cd8bb58daa06d62135e62090fea9d27488",
+  "fixture_sha256": "3e0bb7b9d83085225f206bcb73fe47dfd4e69e11234a52bf4ea4da323c211ef4",
+  "selection": "1995-07-01 00:00 through 11:59 source timezone -0400. Every parsed HTTP request counts toward total; status >=500 counts as bad. No hostnames, IPs, paths or user identifiers retained. Missing minutes are zero traffic.",
+  "rows": 720,
+  "total_requests": 26978,
+  "bad_requests": 0,
+  "limitation": "Historical web traffic, not modern microservice telemetry. Response status is only a proxy for success; no latency or actionable incident labels. No detection-accuracy claims can be made."
+}

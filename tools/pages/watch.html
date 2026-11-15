@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A short captioned walkthrough of the working local prototype."
+    />
+    <title>Project walkthrough</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 40px 24px;
+        background: #111822;
+        color: #edf2fa;
+        font:
+          16px/1.6 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1100px;
+        margin: auto;
+      }
+      a {
+        color: #b0c8ff;
+        text-underline-offset: 4px;
+      }
+      a:focus-visible {
+        outline: 2px solid #b0c8ff;
+        outline-offset: 6px;
+      }
+      h1 {
+        font-size: clamp(28px, 5vw, 44px);
+        line-height: 1.2;
+        margin-bottom: 14px;
+      }
+      p {
+        color: #b9c6d7;
+        max-width: 750px;
+      }
+      video {
+        display: block;
+        width: 100%;
+        margin: 30px 0;
+        border: 1px solid #344257;
+        border-radius: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a href="./">← Open interactive demo</a>
+      <h1>See the workflow.</h1>
+      <p>
+        A short, silent recording with on-screen explanations. This captures the
+        local Python application using a fresh temporary database. The
+        interactive Pages version runs the same domain logic in your browser.
+      </p>
+      <video
+        controls
+        playsinline
+        preload="metadata"
+        poster="./overview.png"
+        aria-label="Captioned project walkthrough"
+      >
+        <source src="./demo.webm" type="video/webm" />
+        <a href="./demo.webm">Download the WebM recording</a>
+      </video>
+      <p>
+        Controls: press Space to play or pause, and use the video player's seek
+        bar to replay a step. The repository's docs/DEMO.md provides a text
+        walkthrough.
+      </p>
+    </main>
+  </body>
+</html>

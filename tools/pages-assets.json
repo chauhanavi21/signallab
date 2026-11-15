@@ -1,0 +1,78 @@
+{
+  "version": "0.27.7",
+  "source": "https://pyodide.org/en/0.27.7/",
+  "assets": [
+    {
+      "file": "pyodide.js",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js",
+      "sha256": "b4cb23a53aba19c221659b9fb40a2f18281d685691dc06647fb0afd0681baf98",
+      "bytes": 14913
+    },
+    {
+      "file": "pyodide.asm.js",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.asm.js",
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+      "bytes": 1255688
+    },
+    {
+      "file": "pyodide.asm.wasm",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.asm.wasm",
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+      "bytes": 10105545
+    },
+    {
+      "file": "python_stdlib.zip",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/python_stdlib.zip",
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+      "bytes": 2360737
+    },
+    {
+      "file": "pyodide-lock.json",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide-lock.json",
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+      "bytes": 112205
+    },
+    {
+      "file": "hashlib-1.0.0-cp312-cp312-pyodide_2024_0_wasm32.whl",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/hashlib-1.0.0-cp312-cp312-pyodide_2024_0_wasm32.whl",
+      "sha256": "4a6971a70bf547ad93f011e121392803ce1595e62e8b3ca719ffa3ec91384722",
+      "bytes": 11179
+    },
+    {
+      "file": "openssl-1.1.1w.zip",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/openssl-1.1.1w.zip",
+      "sha256": "20b92cd9b9adb1a739af9f93772b60c084203aacf63ae1b2353951bd80c97f08",
+      "bytes": 2025919
+    },
+    {
+      "file": "sqlite3-1.0.0-cp312-cp312-pyodide_2024_0_wasm32.whl",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/sqlite3-1.0.0-cp312-cp312-pyodide_2024_0_wasm32.whl",
+      "sha256": "43061928762b03482676a1e11dcef99a003148e59fe914b6a3e41180c382cfc3",
+      "bytes": 563076
+    },
+    {
+      "file": "PYODIDE-LICENSE",
+      "url": "https://raw.githubusercontent.com/pyodide/pyodide/0.27.7/LICENSE",
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+      "bytes": 16725
+    },
+    {
+      "file": "PYTHON-LICENSE",
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.12.7/LICENSE",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936
+    },
+    {
+      "file": "OPENSSL-LICENSE",
+      "url": "https://raw.githubusercontent.com/openssl/openssl/OpenSSL_1_1_1w/LICENSE",
+      "sha256": "c32913b33252e71190af2066f08115c69bc9fddadf3bf29296e20c835389841c",
+      "bytes": 6121
+    },
+    {
+      "file": "SQLITE-PUBLIC-DOMAIN.html",
+      "url": "https://www.sqlite.org/copyright.html",
+      "sha256": "44ca9f793055c8e32fc65f65a4f5bcf813a33f5bdaaa084067dd617a4ed3cc70",
+      "bytes": 8351
+    }
+  ]
+}

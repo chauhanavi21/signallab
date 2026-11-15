@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-15T05:50:13.550919+00:00",
+  "dataset": "NASA-HTTP July 1995",
+  "fixture_sha256": "3e0bb7b9d83085225f206bcb73fe47dfd4e69e11234a52bf4ea4da323c211ef4",
+  "passed": true,
+  "minutes": 720,
+  "requests": 26978,
+  "http_5xx": 0,
+  "alert_episodes": 0,
+  "run_id": "95bf205c6bd95dda71696803b45a0b2ce20834b211de6bfd1ab456fa46b40e09",
+  "scope": "Historical count-import and zero-5xx baseline validation only. No actionable incident labels exist. This sample cannot validate detection delay, false positives or production alert efficacy. 4xx responses are included in traffic and excluded from server-failure counts."
+}

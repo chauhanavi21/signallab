@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-11-15T05:48:42.801246+00:00",
+  "file": "docs/demo.webm",
+  "bytes": 4025714,
+  "sha256": "47ec7baad72b1c1f62f61ef1564e2c0088dcb92f18a07441137ad119e89b5c1c",
+  "viewport": "1280x800",
+  "format": "WebM",
+  "audio": "Silent, with on-screen captions",
+  "chapters": [
+    "SignalLab \u00b7 Replay one traffic trace through three SLO alert policies.",
+    "1 / Request-weighted burn uses actual request counts and complete rolling windows.",
+    "2 / Switch services to inspect their five-minute and one-hour burn.",
+    "3 / Compare episodes, false episodes, firing time and detection delay together.",
+    "4 / Change the SLO and replay the same seed. Every chart and table is recomputed.",
+    "5 / Multiwindow rules trade shorter firing time for later detection in this synthetic trace.",
+    "Independent local evaluator \u00b7 Import your own counts \u00b7 No production paging or universal-winner claims."
+  ],
+  "scope": "Uncut automated capture of the local Python app with an isolated temporary database."
+}

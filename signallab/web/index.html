@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en" data-project="signallab" data-appearance="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1018" />
+    <meta
+      name="description"
+      content="SignalLab, an interactive SLO alert replay studio inspired by public Google SRE research."
+    />
+    <title>SignalLab · Reliability studio</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/studio.js" defer></script>
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/"
+        ><span class="mark">S</span> SignalLab
+        <span class="brand-detail">/ Reliability studio</span></a
+      ><span class="badge"><i></i> Local research lab</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <div class="nav-label">WORKSPACE</div>
+        <nav>
+          <a class="active" href="#overview">Overview <span>01</span></a
+          ><a href="#signals">Signal explorer <span>02</span></a
+          ><a href="#policies">Policy comparison <span>03</span></a
+          ><a href="#method">Research & method <span>04</span></a>
+        </nav>
+        <div class="aside-note">
+          <span class="eyebrow">THE QUESTION</span>
+          <p>When should an error become a page?</p>
+          <small
+            >Explore the cost of noise, detection delay, and sustained budget
+            burn.</small
+          >
+        </div>
+        <div class="aside-footer">
+          INDEPENDENT PORTFOLIO PROJECT<br />Inspired by public Google SRE
+          guidance.
+        </div>
+      </aside>
+      <main id="overview" tabindex="-1">
+        <div class="page-heading hero">
+          <div class="hero-copy">
+            <div class="eyebrow hero-overline">RELIABILITY, IN PERSPECTIVE</div>
+            <h1>
+              Clarity in<br /><span class="headline-accent">every signal.</span>
+            </h1>
+            <p class="subtitle">
+              A workspace for the moments that matter. Explore service behavior
+              and find the balance between alert noise and detection speed.
+            </p>
+            <div class="hero-actions">
+              <button id="export" disabled>
+                Export replay <span aria-hidden="true">↗</span></button
+              ><a class="understated" href="#signals"
+                >Explore the signals
+                <span class="arrow-glyph" aria-hidden="true">↓</span></a
+              >
+            </div>
+          </div>
+          <div
+            id="hero-visual"
+            class="hero-frame"
+            role="region"
+            aria-label="Service replay overview"
+          >
+            <div class="frame-header">
+              <span>PREPARING WORKSPACE</span>
+              <div class="frame-dots" aria-hidden="true">
+                <i></i><i></i><i></i>
+              </div>
+            </div>
+            <div class="skeleton-row"></div>
+            <div class="skeleton-row"></div>
+            <div class="skeleton-row"></div>
+          </div>
+        </div>
+        <div class="notice" id="status" role="status" aria-live="polite">
+          Building the initial replay…
+        </div>
+        <section class="panel controls" aria-labelledby="config-title">
+          <div>
+            <h2 id="config-title">Replay configuration</h2>
+            <small id="dataset"
+              >Synthetic incident trace · 12 hours · 3 services</small
+            >
+          </div>
+          <form id="config">
+            <label
+              >SLO target (%)<input
+                id="slo"
+                type="number"
+                min="90"
+                max="99.999"
+                step="0.001"
+                value="99.9"
+                required /></label
+            ><label
+              >Random seed<input
+                id="seed"
+                type="number"
+                min="0"
+                max="4294967295"
+                value="42"
+                required /></label
+            ><label
+              >Min. requests / window<input
+                id="minimum"
+                type="number"
+                min="0"
+                max="100000"
+                value="100"
+                required /></label
+            ><button id="run" type="submit">Run replay <span>→</span></button>
+          </form>
+        </section>
+        <section
+          class="metrics"
+          id="metrics"
+          aria-label="Replay summary"
+        ></section>
+        <section class="two-col" id="signals">
+          <article class="panel chart-panel">
+            <div class="panel-heading">
+              <div>
+                <div class="eyebrow">TRAFFIC → SIGNAL</div>
+                <h2>Budget burn over time</h2>
+              </div>
+              <label class="sr-only" for="service">Service</label
+              ><select id="service" aria-label="Service"></select>
+            </div>
+            <div class="legend">
+              <span><i class="dot blue"></i> 5-minute burn</span
+              ><span><i class="dot teal"></i> 1-hour burn</span
+              ><span><i class="dot amber"></i> 14.4× fast threshold</span>
+            </div>
+            <div id="chart" class="chart" aria-live="polite"></div>
+            <p class="caption">
+              Burn = observed error ratio / allowed error ratio. Full windows
+              only; unavailable values are left blank.
+            </p>
+          </article>
+          <article class="panel">
+            <div class="eyebrow">READ THE RESULT</div>
+            <h2>Policy trade-off</h2>
+            <div id="finding" class="finding"></div>
+            <div class="callout">
+              A replay is evidence about this workload. The thresholds are
+              illustrative starting points from the SRE Workbook.
+            </div>
+          </article>
+        </section>
+        <section class="panel" id="policies">
+          <div class="panel-heading">
+            <div>
+              <div class="eyebrow">SIDE-BY-SIDE</div>
+              <h2>Three ways to page</h2>
+            </div>
+            <span class="badge" id="label-state">Synthetic labels</span>
+          </div>
+          <div
+            class="table-wrap"
+            id="comparison"
+            tabindex="0"
+            role="region"
+            aria-label="Policy comparison"
+          ></div>
+          <p class="caption">
+            Precision counts alert episodes overlapping an actionable incident.
+            Recall counts labeled incidents detected. These are different
+            denominators.
+          </p>
+        </section>
+        <section class="two-col">
+          <article class="panel">
+            <div class="eyebrow">MULTIWINDOW POLICY</div>
+            <h2>Alert episodes</h2>
+            <div
+              id="alerts"
+              class="table-wrap"
+              tabindex="0"
+              role="region"
+              aria-label="Alert episodes"
+            ></div>
+          </article>
+          <article class="panel">
+            <div class="eyebrow">BRING YOUR OWN TRACE</div>
+            <h2>Test a different workload</h2>
+            <p class="muted">
+              CSV columns: <code>minute,service,total,bad</code>. Each service
+              starts at minute zero with no missing buckets. Imported data has
+              no incident labels.
+            </p>
+            <div class="actions">
+              <label class="button secondary" for="csv-file"
+                >Import CSV<input
+                  id="csv-file"
+                  class="sr-only"
+                  type="file"
+                  accept=".csv,text/csv" /></label
+              ><button id="sample" class="secondary">Download sample</button
+              ><button id="reset" class="text-button">Use demo</button>
+            </div>
+            <p class="caption">
+              At most 10,000 rows, 12 services, and 800 KB. Low traffic is
+              controlled by the minimum request setting.
+            </p>
+          </article>
+        </section>
+        <section class="panel" id="method">
+          <div class="eyebrow">RESEARCH → IMPLEMENTATION</div>
+          <h2>Built from public engineering ideas</h2>
+          <div id="method-content"></div>
+        </section>
+        <footer>
+          SignalLab / v1.0 · Local replay evaluator · No notifications are sent
+          · Independent, not affiliated with Google.
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

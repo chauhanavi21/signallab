@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-11-15T05:50:12.696484+00:00",
+  "python": "3.11.9",
+  "command": "python verify.py",
+  "tests_run": 19,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "evidence": {
+    "study": "artifacts/policy-study.json",
+    "default_run": "66bf134bf8caf70fad058f6b6901cef9d66ef90bb524d5b0473fde6090d76ebe",
+    "comparison": [
+      {
+        "key": "threshold",
+        "name": "One-minute SLO threshold",
+        "episodes": 88,
+        "firing_minutes": 303,
+        "precision": 0.022727272727272728,
+        "recall": 1.0,
+        "median_detection_minutes": 0.0,
+        "false_episodes": 86
+      },
+      {
+        "key": "short_burn",
+        "name": "Five-minute burn only",
+        "episodes": 2,
+        "firing_minutes": 207,
+        "precision": 1.0,
+        "recall": 1.0,
+        "median_detection_minutes": 3.0,
+        "false_episodes": 0
+      },
+      {
+        "key": "multiwindow",
+        "name": "Multiwindow burn-rate",
+        "episodes": 2,
+        "firing_minutes": 158,
+        "precision": 1.0,
+        "recall": 1.0,
+        "median_detection_minutes": 37.0,
+        "false_episodes": 0
+      }
+    ]
+  },
+  "real_data_passed": true
+}

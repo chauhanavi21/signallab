@@ -1,0 +1,2 @@
+# No runtime dependencies. Browser acceptance checks only:
+playwright==1.65.2

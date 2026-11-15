@@ -1,0 +1,96 @@
+{
+  "checked_at": "2026-11-15T05:46:46.851483+00:00",
+  "project": "signallab",
+  "browser_version": "159.0.8154.6",
+  "accessibility": {
+    "tool": "axe-core 4.10.3",
+    "script_sha256": "880970c081707360e64f34cea25ff91892f5bc95675b0776925b9709dd8a68bb",
+    "standard": "Automated WCAG 2 A/AA, 2.1 A/AA and 2.2 AA rules",
+    "runs": [
+      {
+        "state": "workspace",
+        "theme": "light",
+        "width": 1440,
+        "violations": [],
+        "passes": 30,
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 33
+          }
+        ]
+      },
+      {
+        "state": "workspace",
+        "theme": "light",
+        "width": 390,
+        "violations": [],
+        "passes": 31,
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 45
+          }
+        ]
+      },
+      {
+        "state": "workspace",
+        "theme": "dark",
+        "width": 1440,
+        "violations": [],
+        "passes": 30,
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 33
+          }
+        ]
+      },
+      {
+        "state": "workspace",
+        "theme": "dark",
+        "width": 390,
+        "violations": [],
+        "passes": 31,
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 45
+          }
+        ]
+      }
+    ],
+    "violations": 0,
+    "scope": "Automated checks only; incomplete rules need human review. This is not a WCAG conformance certification or a screen-reader/device test."
+  },
+  "mobile": {
+    "method": "Cold-cache headless Chromium, 390x844, 4x CPU slowdown, 150ms network latency, 1.6Mbps down/0.75Mbps up, reduced motion.",
+    "measurement": {
+      "longTasks": [
+        511
+      ],
+      "lcp": 1212,
+      "cls": 0.0064164769153882435,
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 1212
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 1212
+        }
+      ],
+      "resource_bytes": 562533,
+      "overflow": false,
+      "initial_ready_ms": 4864.4
+    },
+    "budgets": {
+      "initial_ready_ms": 8000,
+      "cls": 0.1,
+      "overflow": false
+    },
+    "passed": true,
+    "scope": "One local lab navigation, not real-device performance, field Core Web Vitals, INP or a percentile estimate. LCP is observed only before the measurement ends. Resource bytes exclude the document."
+  }
+}
