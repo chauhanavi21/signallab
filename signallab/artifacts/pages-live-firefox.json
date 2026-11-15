@@ -1,0 +1,82 @@
+{
+  "project": "signallab",
+  "browser": "firefox",
+  "target": "https://chauhanavi21.github.io/signallab/",
+  "checks": [
+    {
+      "name": "initial replay renders computed policies",
+      "passed": true
+    },
+    {
+      "name": "burn chart rendered",
+      "passed": true
+    },
+    {
+      "name": "default incident episodes",
+      "passed": true
+    },
+    {
+      "name": "service selection updates chart",
+      "passed": true
+    },
+    {
+      "name": "configuration reaches calculation engine",
+      "passed": true
+    },
+    {
+      "name": "export includes reproducible run hash",
+      "passed": true
+    },
+    {
+      "name": "invalid CSV has actionable error",
+      "passed": true
+    },
+    {
+      "name": "imported data has no fabricated incident scores",
+      "passed": true
+    },
+    {
+      "name": "sample download has exact CSV header",
+      "passed": true
+    },
+    {
+      "name": "demo can be restored after import",
+      "passed": true
+    },
+    {
+      "name": "browser and CLI default run hashes match",
+      "passed": true
+    },
+    {
+      "name": "chart keyboard inspection reaches the real final minute",
+      "passed": true
+    },
+    {
+      "name": "chart keyboard inspection steps through request buckets",
+      "passed": true
+    },
+    {
+      "name": "hero service summaries come from the replay",
+      "passed": true
+    },
+    {
+      "name": "Pages mobile layout has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Pages mobile metric values fit",
+      "passed": true
+    },
+    {
+      "name": "Pages keyboard palette opens and closes",
+      "passed": true
+    },
+    {
+      "name": "no uncaught JavaScript errors",
+      "passed": true
+    }
+  ],
+  "passed": 18,
+  "page_errors": [],
+  "scope": "Actual in-browser Python execution. No server-side HTTP/session/concurrency guarantee is inferred."
+}

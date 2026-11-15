@@ -36,6 +36,9 @@ def sources():
     )
     names = [*root_files, *(f"{PROJECT}/{name}" for name in app_files),
              *(f"{PROJECT}/artifacts/{name}" for name in (*EVIDENCE, "browser-checks-firefox.json", "browser-checks-webkit.json", "quality-checks.json", "real-data-checks.json", "demo-recording.json", "pages-chromium.json", "pages-firefox.json", "pages-webkit.json"))]
+    for name in ["pages-live-chromium.json", "pages-live-firefox.json", "pages-live-webkit.json"]:
+        if (ROOT / PROJECT / "artifacts" / name).is_file():
+            names.append(f"{PROJECT}/artifacts/{name}")
     result = {}
     for name in sorted(names):
         path = ROOT / name

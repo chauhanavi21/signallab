@@ -12,7 +12,7 @@ The browser runtime downloads about 16.5 MB before its first computation. This c
 
 ## Browser and accessibility checks
 
-The local acceptance suite runs in Chromium, Firefox and Playwright WebKit. WebKit on Windows/Linux is an engine test, not Safari or iPhone validation. The Pages build separately runs the domain workflows in all three engines, including tab isolation for the stateful projects. Reports are in artifacts/browser-checks*.json and artifacts/pages-*.json. GitHub Actions reruns these checks on Ubuntu, and the core/HTTP tests on Ubuntu and Windows.
+The local acceptance suite runs in Chromium, Firefox and Playwright WebKit. WebKit on Windows/Linux is an engine test, not Safari or iPhone validation. The Pages build separately runs the domain workflows in all three engines, including tab isolation for the stateful projects. Reports are in artifacts/browser-checks*.json and artifacts/pages-*.json. Separate artifacts/pages-live-*.json records identify checks against the public URL. GitHub Actions reruns these checks on Ubuntu, and the core/HTTP tests on Ubuntu and Windows.
 
 axe-core 4.10.3 reports **0 automated violations** across 4 combinations of state, light/dark theme and 1440/390 px viewport. The audit injects its local development script with CSP bypass; the acceptance suite exercises the actual CSP without bypass. Incomplete audit rules still require manual review. Automated results are not a WCAG conformance claim; screen-reader testing remains a human task.
 
@@ -22,7 +22,7 @@ Keyboard-scrollable tables now have named focusable regions. Navigation indices 
 
 Local HTTP app, cold cache, headless Chromium, 390x844 viewport, 4x CPU slowdown, 150 ms latency, 1.6 Mbps down / 0.75 Mbps up, reduced motion:
 
-- Initial UI ready: **4864 ms** (8,000 ms budget).
+- Initial UI ready: **5069 ms** (8,000 ms budget).
 - Observed layout shift: **0.0064** (0.1 budget).
 - Horizontal page overflow: **false**.
 

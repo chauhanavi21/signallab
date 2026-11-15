@@ -8,6 +8,8 @@ An independent **request-weighted SLO alert replay studio**, inspired by public 
 
 ![SignalLab overview](signallab/docs/overview.png)
 
+[Download the verified source ZIP](https://github.com/chauhanavi21/signallab/releases/latest/download/signallab-source.zip).
+
 Run locally with Python 3.11+: `python signallab/server.py`. No runtime install or build step. The [application README](signallab/README.md) covers controls and measured findings. See the [recruiter guide](RECRUITER_GUIDE.md) for a quick technical review and the [research/design](signallab/docs/RESEARCH_AND_DESIGN.md) for source-to-code decisions.
 
 The live demo runs the existing Python logic in your browser. Each tab is isolated and data resets on reload. Its first load downloads the Python runtime; it does not host the Python HTTP server. [Execution modes and validation limits](signallab/docs/RELEASE.md) explain the boundary, accessibility audit, mobile lab results, historical data and recording.
