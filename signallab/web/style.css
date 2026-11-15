@@ -2735,3 +2735,15 @@ footer {
     letter-spacing: -2px;
   }
 }
+
+/* Keep the mobile sign-in action visible across system-font metrics. */
+@media (max-width: 580px) {
+  .login-layout { padding-top: 28px; gap: 20px; }
+  .login-story .subtitle { display: none; }
+}
+
+@media (max-width: 580px) {
+  [data-project="signallab"] .metrics .metric:first-child strong {
+    font-size: clamp(18px, 5.25vw, 24px);
+  }
+}

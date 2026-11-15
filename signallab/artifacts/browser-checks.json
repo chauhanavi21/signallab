@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-15T05:52:15.311168+00:00",
+  "checked_at": "2026-11-15T06:00:15.986317+00:00",
   "project": "signallab",
   "browser": "chromium",
   "browser_version": "159.0.8154.6",
@@ -154,8 +154,8 @@
   "http_5xx": [],
   "frame_cadence": {
     "samples": 35,
-    "median_ms": 16.700000000000045,
-    "p95_ms": 16.800000000000182,
+    "median_ms": 16.699999999999818,
+    "p95_ms": 16.700000000000045,
     "note": "Local headless requestAnimationFrame cadence; not a production rendering benchmark."
   },
   "note": "Headless browser engine, isolated temporary server/database. WebKit on this host is not Safari. Includes domain workflows, keyboard navigation, theme/motion persistence, reduced motion, downloads, and three viewport widths."

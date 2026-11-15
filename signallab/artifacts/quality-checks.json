@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-15T05:46:46.851483+00:00",
+  "checked_at": "2026-11-15T06:00:17.098149+00:00",
   "project": "signallab",
   "browser_version": "159.0.8154.6",
   "accessibility": {
@@ -67,23 +67,25 @@
     "method": "Cold-cache headless Chromium, 390x844, 4x CPU slowdown, 150ms network latency, 1.6Mbps down/0.75Mbps up, reduced motion.",
     "measurement": {
       "longTasks": [
-        511
+        53,
+        611,
+        79
       ],
-      "lcp": 1212,
+      "lcp": 1188,
       "cls": 0.0064164769153882435,
       "paint": [
         {
           "name": "first-paint",
-          "ms": 1212
+          "ms": 1188
         },
         {
           "name": "first-contentful-paint",
-          "ms": 1212
+          "ms": 1188
         }
       ],
-      "resource_bytes": 562533,
+      "resource_bytes": 563034,
       "overflow": false,
-      "initial_ready_ms": 4864.4
+      "initial_ready_ms": 5069.2
     },
     "budgets": {
       "initial_ready_ms": 8000,

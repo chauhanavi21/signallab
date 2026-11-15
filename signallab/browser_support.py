@@ -23,7 +23,9 @@ def run(scenario):
     checks, errors, failures = [], [], []
     def check(name, condition):
         checks.append({"name": name, "passed": bool(condition)})
-        if not condition: raise AssertionError(name)
+        if not condition:
+            page.screenshot(path=str(output / "failure.png"), full_page=True, animations="disabled")
+            raise AssertionError(name)
     with tempfile.TemporaryDirectory() as temporary:
         store = core.Store(Path(temporary) / "browser.sqlite") if hasattr(core, "Store") else None
         server = Server(0, API, root, store)
@@ -40,7 +42,11 @@ def run(scenario):
                 page.on("response", lambda response: failures.append(f"{response.status} {response.url}") if response.status >= 500 else None)
                 base = f"http://127.0.0.1:{server.server_port}"
                 page.goto(base)
-                scenario(page, context, base, output, check)
+                try:
+                    scenario(page, context, base, output, check)
+                except Exception:
+                    page.screenshot(path=str(output / "failure.png"), full_page=True, animations="disabled")
+                    raise
                 check("workspace motion layer loads", page.evaluate("!!window.Studio"))
                 page.keyboard.press("Control+k")
                 expect(page.locator("#command-dialog")).to_be_visible()
